@@ -1,0 +1,16 @@
+*{
+
+    list-style: none;
+}
+ul li p{
+    display:inline-block;//将选项和A同一行
+}
+#conten{
+    width:650px;
+    height:400px;
+    margin:0 auto;
+}
+#box{
+    width:650px;
+    height:30px;
+}
