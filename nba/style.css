@@ -1,0 +1,534 @@
+body{
+    background-color: #f6f6f6;
+}
+html,body{
+    font-size: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+}
+ /*首页内容CSS*/
+.header{
+    background-color: #1a477b;
+    width: 100%;
+    height:19.3rem;
+}
+.header .header-content{
+    width: 1000px;
+    height: 172px;
+    z-index:3000;
+    background-color:#1a477b;
+    margin: 0 auto;
+}
+.logo{
+    width: 400px;
+    height: 136px;
+    position: absolute;
+    top:2rem;
+}
+.logo-site{
+    color:white;
+    width: 280px;
+    height: 54px;
+    font-size: 30px;
+    position: absolute;
+    top:10px;
+    left:12%;
+}
+.logo-link{
+    width: 300px;
+    font-size: 18px;
+    color: #bdc3cd;
+    position: absolute;
+    left: 48px;
+    top:57px;
+}
+.logo-link span{
+    border-left: 1px solid black;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+ /*制作放上鼠标放下列表*/
+.drop-down{
+    width: 147px;
+    height:31px;
+    position:absolute;
+    top:74px;
+    right:244px;
+}
+.drop-down .store-content{
+    width: 147px;
+    height:0;
+    background-color: #246cb7;
+    overflow: hidden;
+}
+.drop-down .store-content li {
+    font-size: 16px;
+    color: white;
+    width: 147px;
+    height:30px;
+    overflow: hidden;
+    padding: 10px 0 0 50px;
+    border-bottom: 1px solid #565656;
+}
+.drop-down .down img{
+    position: absolute;
+    right: 10px;
+    top:15px;
+}
+.drop-down .up img{
+    height: 0;
+    position: absolute;
+    right: 10px;
+    top:15px;
+    overflow: hidden;
+}
+.nbaapp{
+    position: absolute;
+    right: -147px;
+    top:0;
+}
+.drop-down:hover > .store-content{
+    transition: 0.5s;
+    height:245px;position: absolute;z-index: 999;
+}
+
+/*球队信息*/
+.nav-index{
+    width: 100%;
+    height: 60px;
+    background-color:#1e518c;
+}
+.nav-index .wrap{
+   height: 60px;
+   width: 1000px;
+    margin: 0 auto;
+}
+.nav-index .wrap ul .tab-top{
+    height: 40px;
+    float: left;
+    font-size: 16px;
+    color: white;
+    padding:20px 25px 0 14px;
+    position: relative;
+}
+.nav-index .wrap ul .first{
+    background-color: #276cba;
+}
+
+.nav-index ul .tab-top a{
+    color:white;
+    display:block;
+    text-decoration:none;
+}
+.nav-index ul .tab-top:hover {
+    background-color: #276cba;
+}
+
+/*移动到球队下面的信息*/
+.nav-index .wrap ul .the-team:hover .all-team{display: block;position: absolute;z-index: 999}
+.all-team{ width:700px;color: white;background-color: #276cba;position: absolute;left:0;top:60px;display: none;}
+.all-team .teams li img{ width: 40px;height: 30px;}
+.all-team ul li{ list-style: none;width: 118px; height: 50px;float: left}
+.all-team .teams ul{width: 840px;height: 50px}
+.all-team ul li span{color: white;}
+.all-team ul>li:not(:first-child):hover{ background-color: #00498b;}
+.play-status{ position:absolute;background-color: #276cba;width: 100px;top:60px;left: 0;display: none;z-index: 999}
+.play-status .tab-player{float: left}
+.play-status .tab-player ul li{width: 100px;height: 30px;text-align: center;padding-top: 20px;}
+.player:hover .play-status{display: block}
+.play-status .tab-player ul li:hover{background-color: #00498b;}
+
+.nba-banner{
+width: 1000px;
+height: 150px;
+margin: 20px 0 20px 139px;
+}
+.wrap-all{
+width: 100%;
+height: 100%;
+background: url("http://mat1.gtimg.com/chinanba/web/statics/bg_2811f8.jpg")center center no-repeat;
+}
+/*++++++++++++++++++++轮播效果++++++++++++++++++++*/
+.swiper-container {
+    width: 54%;
+    height: 370px;
+    position: absolute;
+    left: -148px;
+
+}
+.swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+ /*x++++++++++++++新闻++++++++*/
+.news{
+    background:#fff;
+    margin: 20px 0 20px 140px;
+    width: 680px;
+}
+.news-tittle{
+    width: 680px;
+    height: 39px;
+    background-color: #1e518c;
+    color: white;
+    font-size: 16px;
+}
+.news-tittle .search{
+    float: right;
+    padding: 10px 10px 0 0 ;
+}
+.new-list{
+    width: 680px;
+    background-color: white;
+    padding-top: 20px;
+    border-top: 1px solid #dddddd;
+}
+
+.new-wrap {
+    width: 680px;
+    height: 208px;
+    box-shadow:0px 4px 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0px 4px 2px rgba(0,0,0,0.3);
+    /*老的火狐*/
+    -moz-box-shaow:10px 1px 4px rgba(0,0,0,0.3);
+    -o-box-shadow:10px 1px 4px rgba(0,0,0,0.3);
+    background-color: white;
+    padding-bottom: 20px;
+}
+.new-wrap:hover{
+    color: #2769b9;
+    transform:scale(1.01);
+    cursor:pointer;
+}
+.new-bd .new-world:hover{
+    color:#2769b9;
+}
+.new-wrap h3{
+    font-size: 20px;
+    width: 630px;
+    height: 52px;
+    line-height: 52px;
+    border-top: 1px solid #dddddd;
+    padding-left:27px;
+}
+.new-bd{
+    height: 100px;
+    margin-left: 30px;
+}
+.new-bd .new-world{
+    width: 480px;
+    font-size: 16px;
+    color: #14171a;
+    line-height: 1.5rem;
+    word-break:break-all;
+    margin: -54px 0 0 154px;
+}
+.new-ft{
+    line-height: 50px;
+    padding-left:25px ;
+}
+.new-ft .fl{
+    float: left;
+    color: #7a7a7a;
+}
+.new-ft .fr{
+    float: right;
+    color: #7a7a7a;
+    padding-right: 10px;
+}
+.news .click-more{
+    height: 40px;margin-top: 20px;
+    background-color: #F0F0F0;
+    line-height: 40px;text-align: center;
+    font-size: 16px;color: #606060;font-weight: 100;
+    cursor: pointer;border-top: 1px solid #E5E5E5;
+}
+/*有边框的新闻要点*/
+.slide{
+    width: 300px;
+    display: inline;
+    position: absolute;
+    top:484px;
+    right: 121px;
+}
+.slide .focus-news{
+    width: 300px;
+    height: 370px;
+    float: right;
+    background-color: white;
+    box-shadow:0 4px 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 4px 2px rgba(0,0,0,0.3);
+    /*老的火狐*/
+    -moz-box-shaow:10px 19px 1px rgba(0,0,0,0.3);
+    -o-box-shadow:10px 1px 4px rgba(0,0,0,0.3);
+}
+.focus-news .tittle{
+    height: 45px;
+    color: white;line-height: 45px;
+    font-size: 18px;
+    background-color: #1E518C;
+    padding-left: 10px;
+}
+.news-tittle strong{line-height: 37px;}
+.focus-news img{
+    padding-left: 10px;
+    padding-right: 15px;
+}
+.focus-news ul li{
+    height: 33px;
+    line-height: 33px;
+    color: #14171a;
+    font-size: 14px;
+}
+.focus-news ul li:hover{
+    color:#2769b9;cursor:pointer;
+    border-left: 1px solid #2769b9;
+    background-color: #dedede;
+}
+/*侧边框的视频栏*/
+.video{
+    width:300px;
+    float: left;margin-top: 20px;
+    background-color: white; box-shadow:0 4px 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 4px 2px rgba(0,0,0,0.3);
+    /*老的火狐*/
+    -moz-box-shaow:5px 4px 1px rgba(0,0,0,0.3);
+    -o-box-shadow:10px 1px 4px rgba(0,0,0,0.3);
+}
+.video-tittle{
+    height: 45px;font-size:18px;
+    color: white;background-color: #1E518C;
+    line-height: 45px;padding-left: 10px;
+}
+.video .title-tab{
+    height:45px;
+    border-top: 1px solid #82852a;
+    background-color: #57595B;
+}
+.video .title-tab ul li{
+    width: 99px;
+    float:left;color: white;
+    font-size: 18px;line-height: 45px;
+    border-right:1px solid #7a7a7a;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow:0 2px 0 #3c3c3c;
+}
+.slide .wrap{
+    width: 300px;
+    height: 340px;
+    padding:20px 0 0 10px;
+}
+.video .title-tab .select{background-color: #3c3c3c}
+.wrap ul li{float: left}
+.tab-video a{
+    text-decoration: none;
+    position: relative;
+    float: left;margin:0 10px 10px 0;
+}
+.tab-video img{
+    width: 135px;
+    height: 100px;
+}
+.tab-video img:hover .tab-video .bg{background-color: #007aff}
+.tab-video span{
+    height: 30px;
+    position: absolute;left:0;
+    bottom: 0;cursor:pointer;
+}
+.tab-video .bg{
+    width: 135px;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.tab-video a .text{
+    position: absolute;
+    width: 99px;
+    bottom: 0;color: white;
+    padding-left: 40px;
+    text-overflow:ellipsis;
+    text-shadow:0 2px 0 #1a477b;
+    background: url("http://mat1.gtimg.com/chinanba/web/statics/video_ico_868e3d.png")no-repeat 5px 9px;
+    overflow:hidden;font-size: 12px;line-height: 34px;
+    white-space:nowrap;
+}
+.tab-video span:hover{background-color: #003b77
+}
+.video .wrap .video-one{display: block}
+.video .wrap .video-two{display: none}
+.video .wrap .video-three{display: none}
+.video .tab ul li:hover{
+    background-color: #3c3c3c;
+}
+.video .video-fotter-text{
+    height: 25px;
+    font-size: 16px;
+    color: #7a7a7a;
+   padding-left:235px;
+    line-height: 25px;
+}
+/*球员的数据统计*/
+.data{
+    width:300px;
+    float: left;margin-top: 20px;
+    background-color: white; box-shadow:0 4px 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 4px 2px rgba(0,0,0,0.3);
+    /*老的火狐*/
+    -o-box-shadow:10px 1px 4px rgba(0,0,0,0.3);
+    color: white;
+}
+.data-title{
+    width: 300px;
+    background-color: #1e518c;
+    border-bottom: 1px solid #be9d53;
+    position: relative;
+    color:white;
+    height: 50px;
+    line-height: 50px;
+}
+.data .data-title span{
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.data .data-title ul{
+    position: absolute;
+    top:0;right: 0;
+}
+.data .data-title ul li{
+    margin: 7px 7px 0 0 ;
+    float: left;
+    width: 50px;
+    height: 27px;
+    line-height: 27px;
+    border: 3px solid #1a477b;
+    text-align: center;
+    background-color: #1a477b;
+    cursor: pointer;
+}
+.player-data-title{
+    width: 300px;
+}
+.player-data-title .player-data{
+    background-color: #57595b;
+    width: 300px;
+}
+.data-title .data-tab .select{background-color: #2a6cb6}
+.player-data-title .select{
+    background-color: #434343;
+}
+.player-data ul li{
+    float: left;
+    width: 74px;
+    height: 23px;
+    cursor: pointer;
+    text-align: center;
+    padding:10px 0 0 0;
+    background-color: #696969;
+    font-size: 13px;
+    border-left:1px solid #888888;
+    border-bottom: 1px solid #7e7e7e;
+    font-weight: 100;
+}
+/*.player-data ul li:hover{*/
+    /*background-color: #989898*/
+/*}*/
+.data .row{
+    width: 300px;
+    float: left;
+}
+.player-data-all{
+    width: 300px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+.data .row .player-img{
+    width: 110px;
+    height: 180px;
+    float: left;
+}
+.player-img span{
+    font-size: 10rem;
+    color: #616161;
+    float: left;
+    position: absolute;
+    top:40px;left:100px;
+    font-weight: 700;
+}
+.row .player-img img{
+    width: 120px;
+    height: 180px;
+    float: left;
+    padding-left: 0;
+    padding-right: 25px;
+}
+.data .row .name {
+    width: 100px;
+    float: left;
+    color: #444;
+    font-size: 16px;
+    position: absolute;
+    top: 40px;
+    left: 160px;
+    font-weight: 700;
+}
+.data .row .name span{
+    color: #575757;
+    line-height: 25px;
+}
+.data .row .name .player-team span{
+    font-size: 12px;
+}
+.data .row .logo{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 28px;
+    top: 8px;
+}
+.data .row .logo img{
+    width: 50px;
+    height: 50px;
+}
+.ranking{
+    width: 300px;
+    /*position: relative;*/
+    float: left;
+}
+.ranking-list{
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #9e9e9e;
+    float: left;
+}
+.ranking .ranking-list ul li{
+    float: left;
+    padding:0 10px 0 10px;
+}
+/*footer 部分样式代码*/
+.footer{
+    width: 100%;
+    height: 100px;
+}
+.footer .box{
+    width: 80%;
+    background-color: white;
+    margin:0 auto;
+}

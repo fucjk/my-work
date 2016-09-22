@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="css/land.css">
+</head>
+<body>
+<div class="register">
+    <div class="register-header">
+        <a href="myshow.html"><img src="img/4_03.png"></a>
+        <p>登陆</p>
+        <a class="register-land" href="register.html"><img src="img/12.32_03.png"></a>
+    </div>
+</div>
+
+<div class="container">
+    <input class="useID" value placeholder="账号"/><br/>
+    <input class="password" value placeholder="密码"><br/>
+    <div class="save-password"><input class="save" type="checkbox"><strong>记住密码</strong> <span>忘记密码?</span></div>
+    <div class="agree">登录</div>
+</div>
+<div class="footer">
+    <ul>
+        <li class="first"><a href="homepage.html"><img src="img/13_03.png"></a>
+            <p> 首页 </p></li>
+        <li class="classification"><a href="index.html"><img src="img/13_05.png"></a>
+            <p> 分类 </p></li>
+        <li class="shopping-car"><a><img src="img/13_07.png"></a>
+            <p>购物车</p></li>
+        <li class="show"><a href="myshow.html"><img src="img/13_09.png"></a>
+            <p>我的秀</p></li>
+        <li class="the-more"><a href="the-more.html"><img src="img/13_11.png"></a>
+            <p>更多</p></li>
+    </ul>
+</div>
+<script src="tools/jquery.min.js"></script>
+<script>
+    $(function () {
+        $(".agree").bind('click', function () {
+            var user = getUser();
+            $.get("http://datainfo.duapp.com/shopdata/userinfo.php", {
+                status: 'login',
+                userID: user.userID,
+                password: user.password
+            }, function (data) {
+                if (data == 0) {
+                    alert('用户不存在')
+                } else if (data == 2) {
+                    alert('用户名密码不符');
+                }
+                else {
+                    alert('登录成功')
+                }
+            })
+        });
+        //获取到当前用户的注册信息,返回json对象
+        function getUser() {
+            var userInfo = {
+                userID: $('.useID').val(),
+                password: $('.password').val()
+            };
+            return userInfo;
+        }
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

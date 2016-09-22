@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div class="register">
+    <div class="register-header">
+        <a href="myshow.html"><img src="img/4_03.png"></a>
+            <p>注册</p>
+        <a class="register-sign" href="land.html"><img src="img/13_15.png"></a>
+    </div>
+</div>
+<div class="container">
+    <input class="useID" value placeholder="账号"/><br/>
+    <input class="password" value placeholder="密码"><br/>
+    <input class="again-password" value placeholder="重复密码"/><br/>
+    <div class="agree">同意服务协议并注册</div>
+</div>
+<div class="footer">
+    <ul>
+        <li class="first"><a href="homepage.html"><img src="img/13_03.png"></a>
+            <p> 首页 </p></li>
+        <li class="classification"><a href="index.html"><img src="img/13_05.png"></a>
+            <p> 分类 </p></li>
+        <li class="shopping-car"><a><img src="img/13_07.png"></a>
+            <p>购物车</p></li>
+        <li class="show"><a href="myshow.html"><img src="img/13_09.png"></a>
+            <p>我的秀</p></li>
+        <li class="the-more"><a href="the-more.html"><img src="img/13_11.png"></a>
+            <p>更多</p></li>
+    </ul>
+</div>
+<script src="tools/jquery.min.js"></script>
+<script>
+    //提取商品的第一个对象里的图片
+    $(function () {
+        $('.agree').bind('click', function () {
+            var user = getUser();
+            if(inspect(user)){
+                $.get("http://datainfo.duapp.com/shopdata/userinfo.php", {
+                    status: "register",
+                    userID: user.userID,
+                    password: user.password
+                }, function (data) {
+                    if (data == 0) {
+                        alert("重名");
+                    }
+                    else {
+                        alert("注册成功");
+                    }
+                })
+
+            }
+        });
+//        获取到当前用户的注册信息,返回json对象
+        function getUser() {
+            var userInfo = {
+                userID: $('.useID').val(),
+                password: $('.password').val(),
+                password2: $('.again-password').val()
+            };
+            return userInfo;
+        }
+
+        //验证写的两次密码相同
+        function inspect(m) {
+            if (m.password == m.password2) {
+                return true;
+            } else {
+                alert('第二次输入密码错误');
+                return false;
+            }
+        }
+    })
+</script>
+</body>
+</html>

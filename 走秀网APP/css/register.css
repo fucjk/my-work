@@ -1,0 +1,102 @@
+*{
+    margin:0 auto;
+    padding: 0;
+}
+html,body{
+    font-size: 10px;
+}
+.register{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.register .register-header{
+    width: 100%;
+    height: 7rem;
+    background-color: #e4366b;
+    float: left;
+}
+.register img{
+    float: left;
+    position: absolute;
+    left: 5%;
+    top:4%;
+}
+.register-header p{
+    font-size:32px;
+    color: #fffeff;
+    float: left;
+    position: absolute;
+    left: 45%;
+    top:4%;
+}
+.register-header .register-sign img{
+    width: 17%;
+    position: absolute;
+    left: 280px;
+}
+/*账号登陆和密码检测*/
+.container{
+    width: 100%;
+    /*height:200px;*/
+    position: absolute;
+    top:30%;
+}
+.useID,.password,.again-password{
+    outline: none;
+    padding: 0;
+    width: 87%;
+    height: 4rem;
+    border-radius:6px;
+    border: 1px 0 0 1px;
+    border-color: #b3b3bd;
+    margin: 0 0 20px 5%;
+
+}
+.agree{
+    width: 87%;
+    height: 4rem;
+    border-radius: 6px;
+    background-color:#e4366b;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+/*.useID{*/
+
+/*}*/
+/*.password{*/
+
+/*}*/
+/*.again-password{*/
+
+/*}*/
+/*尾部选项*/
+.footer{
+    background-color: #484850;
+    width: 100%;
+    height: 7rem;
+    position:absolute ;
+    bottom:0%;
+}
+.first,.classification,.shopping-cart,.show,.the-more{
+    width: 20%;
+}
+.footer ul li p {
+    color: white;
+    padding-left:16%;
+}
+.footer ul li{
+    float: left;
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+

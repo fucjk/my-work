@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin:0 auto;
+}
+html,body{
+    font-size: 10px;
+}
+/*头部内容*/
+.header-inner{
+    width: 100%;
+    height: 6rem;
+    background-color: #e4366b;
+    position: fixed;
+    top:0;
+}
+.header-inner .back{
+    position: absolute;
+    left:5%;
+    top:31%;
+}
+.header-inner .header-content span{
+    margin: 0 auto;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 5.5rem;
+    position: absolute;
+    left: 40%;
+    top:5%;
+}
+.listing{
+    width: 89%;
+    height: 200px;
+    border: 1px solid #9e9e9e;
+    border-radius: 16px;
+    margin-top: 100px;
+}
+.listing ul{
+    list-style: none;
+}
+.listing ul li{
+    height: 50px;
+    border-bottom: 1px solid #9e9e9e;
+    line-height: 49px;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 300;
+}
+.listing ul li span{ font-size:20px;color:#9e9e9e;}
+.listing ul li span{padding-left:70px}
+.listing ul .coupon span{padding-left: 200px}
+.listing ul .browse span{padding-left: 200px}
+.listing ul .order span{padding-left: 200px}
+.listing ul .collection span{padding-left: 180px}
+.listing ul .collection{border: none;}
+
+.listing-two{
+    width:89%;
+    height: 100px;
+    border: 1px solid #9e9e9e;border-radius:16px;
+    margin-top: 30px;
+}
+.listing-two ul li{
+    height: 50px;border-bottom: 1px solid #9e9e9e;
+    line-height: 50px;padding-left: 10px;font-size: 17px;font-weight: 300;
+}
+.listing-two ul .about{border: none}
+.listing-two ul{list-style: none}
+.listing-two ul .idear span{padding-left: 180px;color:#9e9e9e;}
+.listing-two ul .about span{padding-left: 230px;color:#9e9e9e;}
+/*退出登录*/
+.after-register{
+    width:89%;height: 50px;
+    background-color:#e4366b;
+    border-radius: 16px;font-size: 20px;
+    color:white;text-align: center;margin-top:20px;
+    padding-top:20px;
+}
+/*尾部选项*/
+.footer{
+    background-color: #484850;
+    width: 100%;
+    height: 7rem;
+    position:fixed;
+    bottom:0;
+}
+.first,.classification,.shopping-car,.show,.the-more{
+    width: 20%;
+}
+.the-more{
+    border-top: 3px solid #e4366b;
+}
+.footer ul li p {
+    color: white;
+    padding-left:16%;
+}
+.footer ul li {
+    float: left;
+    list-style: none;
+}
+.listing a{
+    height: 50px;
+    border-bottom: 1px solid #9e9e9e;
+}
